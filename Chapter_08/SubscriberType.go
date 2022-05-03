@@ -34,7 +34,8 @@ func main() {
 	printInfo(subscriber2)
 
 	var s Subscriber
+	s = defaultSubscriber("Ankit")
 	fmt.Println(s.rate) // Before
-	applyDiscount(&s)
+	applyDiscount(&s)   // passing the address of struct - Subscriber
 	fmt.Println(s.rate) // After
 }
